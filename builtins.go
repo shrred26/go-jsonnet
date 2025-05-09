@@ -2533,8 +2533,8 @@ func builtInObjectRemoveKey(i *interpreter, objv value, keyv value) (value, erro
 	), nil
 }
 
-func builtinIsNull(i *interpreter, strv value) (value, error) {
-    _, isNull := strv.(*valueNull)
+func builtinIsNull(i *interpreter, v value) (value, error) {
+    _, isNull := v.(*valueNull)
     return makeValueBoolean(isNull), nil
 }
 
